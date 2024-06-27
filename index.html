@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Reviews</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="loading-spinner" class="loader justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0"></div>
+    <div id="content" class="g  content justify-content-center align-items-center">
+        <img src="images/wraper (1).png" class="g position-relative" alt="Wrapper">
+        
+        <div class="my-5 position-absolute m">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary container">
+                <div class="container-fluid">
+                    <a class="text-white navbar-brand" href="#">
+                        <img src="images/logo-sm.png" class="w-25" alt=""> GAME REVIEWS
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse container" id="navbarText">
+                        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto navbar-text">
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="MMORPG" aria-current="page" href="#">MMORPG</a>
+                                
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="shooter" href="#">SHOOTER</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="sailing" href="#">SAILING</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="permadeath" href="#">PERMADEATH</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="superhero" href="#">SUPERHERO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link category" data-category="pixel" href="#">PIXEL</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <div id="game-reviews" class="row row-cols-1 mt-auto row-cols-md-4 mx-5 my-5 g-4 game-reviews"></div>
+        </div>
+    </div>
+
+    <div class="lightbox-container d-none flex-column justify-content-center align-items-center position-fixed top-0 bottom-0 start-0 end-0">
+        <h2 class="fs-1 text-white container d-flex justify-content-start align-self-start">Details Game</h2>
+    
+        <div class="lightbox-item col-lg-6 col-md-8 col-12 d-flex flex-row gap-1">
+            <img class="img-fluid" src="" alt="Game Screenshot">
+    
+            <div class="btn-toolbar justify-content-between mt-3">
+                <button id="close" type="button" class="btn"><i class="fa-solid fa-x"></i></button>
+            </div>
+    
+            <div class="gap-5">
+                <div class="d-flex flex-row">
+                    <h1 class="text-white">Title: <span></span></h1>
+                </div>
+                <div class="d-flex flex-row my-1 mx-2">
+                    <h6 class="colt">Category:</h6>
+                    <h6 class="category px-1 backgrounds"></h6>
+                </div>
+                <div class="d-flex flex-row my-1 mx-2">
+                    <h6 class="colt">Platform:</h6>
+                    <h6 class="platform px-1 backgrounds"></h6>
+                </div>
+                <div class="d-flex flex-row my-q1 mx-2">
+                    <h6 class="colt">Status:</h6>
+                    <h6 class="status px-1 backgrounds"></h6>
+                </div>
+                <p class="game-full-description colt"></p>
+                <button class="py-2 px-4 borders">Show Game</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-card-template" style="display: none;">
+        <div class="game-card col border-4 border-danger accordion-item cursor">
+            <div class="card h-100 bor bg-transparent b">
+                <div class="brr">
+                    <img class="card-img-top px-3 py-3 brr" alt="">
+                    <div class="card-body px-2">
+                        <div class="d-flex row-flex justify-content-between align-items-center">
+                            <p class="card-title text-white lll"></p>
+                            <span class="align-items-center align-self-stretch text-bg-primary free rounded-top-1 rounded-bottom-1">Free</span>
+                        </div>
+                        <p class="card-text text-center p text-white"></p>
+                    </div>
+                </div>
+                <div class="card-footer d-flex row-flex justify-content-between align-items-center">
+                    <small class="text-white background px-1 genre"></small>
+                    <small class="text-white background px-1 platform"></small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="game-details-template" style="display: none;">
+        <div class="game-details">
+            <img alt="">
+            <div class="game-info">
+                <div class="game-title"></div>
+                <div class="game-description"></div>
+                <div class="game-meta">
+                    <span class="genre"></span>
+                    <span class="platform"></span>
+                </div>
+                <div class="game-full-description"></div>
+                <a href="" target="_blank">Play Now</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
